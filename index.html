@@ -25,6 +25,9 @@
         li.innerHTML = event.data;
         document.querySelector('#pings').appendChild(li);
       };
+	ws.onopen = function (event) {
+		ws.send("Here's some text that the server is urgently awaiting!"); 
+	};
     </script>
   </head>
   <body>
